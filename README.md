@@ -1,5 +1,5 @@
 # GRCProjects
-MyGRCCode
+
 GRC projects from the ground up
 
 Developed and tested using GNU Radio Companion 3.10.1.1 on a Linux system using Ubuntu 22.04.2 LTS
