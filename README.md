@@ -3,7 +3,7 @@
 ## GRC projects I've put together
 ### Developed and tested using GNU Radio Companion 3.10.1.1 on a Linux system using Ubuntu 22.04.2 LTS.  Most of the projects require the use of an RTL-SDR dongle (or equivalent) for capturing signals from the air.  Each project description gives more details. 
 
-Each folder contains a project with a *.grc file, a corresponding *.py file, and a *.pdf file that shows the project blocks layout. The only file one really needs is the *.grc file.
+Each folder contains a project with a *.grc file, a corresponding *.py file, and a *.pdf file that shows the project blocks layout. The only file one really needs is the *.grc file. Some folders might contain multiple, related projects.  
 
 
 ## Project descriptions
