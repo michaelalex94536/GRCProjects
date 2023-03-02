@@ -2,10 +2,9 @@
 
 ## GRC projects I've put together
 
-#### Developed and tested using GNU Radio Companion 3.10.1.1 on a Linux system using Ubuntu 22.04.2 LTS.  Most of the projects require the use of an RTL-SDR dongle (or equivalent) for capturing signals from the air.  Each folder contains a project with a *.grc file, a corresponding *.py file, and a *.pdf file that shows the project blocks layout. The only file one really needs is the *.grc file. Some folders might contain multiple, related projects.  For projects that require signal transmission, we will use a HackRF or an ADALM Pluto. Each project description below gives more details about what the project requires, as well as a brief explanation of what's going on.
+#### Developed and tested using GNU Radio Companion 3.10.1.1 on a Linux system using Ubuntu 22.04.2 LTS.  Most of the projects require the use of an RTL-SDR dongle (or equivalent) for capturing signals from the air.  Each folder contains a project with a *.grc file, a corresponding *.py file, and a *.pdf file that shows the project blocks layout. The only file one really needs is the *.grc file. Some folders might contain multiple, related projects.  For projects that require signal transmission, we will use a HackRF or an ADALM Pluto. Each project description below gives more details about what the project requires, as well as a brief explanation of what's going on.  Projects are listed in no special order. 
 
 ### Project descriptions
-
 #### DTMF_generator
 The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them in the time and frequency domains, and plays the Touch-Tones using the PC speaker. No external hardware required. This flowgraph is just a gentle introduction to GNU Radio Companion basics.
 
