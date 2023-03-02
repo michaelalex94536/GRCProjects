@@ -99,8 +99,8 @@ class OOK_capture_basic(gr.top_block, Qt.QWidget):
         self.rtlsdr_source_0.set_antenna('', 0)
         self.rtlsdr_source_0.set_bandwidth(0, 0)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
-            10000, #size
-            samp_rate, #samp_rate
+            2048, #size
+            samp_rate/100, #samp_rate
             "", #name
             1, #number of inputs
             None # parent
@@ -112,14 +112,14 @@ class OOK_capture_basic(gr.top_block, Qt.QWidget):
 
         self.qtgui_time_sink_x_0_0.enable_tags(True)
         self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
-        self.qtgui_time_sink_x_0_0.enable_autoscale(False)
+        self.qtgui_time_sink_x_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0.enable_grid(False)
         self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
         self.qtgui_time_sink_x_0_0.enable_control_panel(False)
         self.qtgui_time_sink_x_0_0.enable_stem_plot(False)
 
 
-        labels = ['Decimated Re signal', 'Raw signal Im', 'Signal 3', 'Signal 4', 'Signal 5',
+        labels = ['Decimated signal', 'Raw signal Im', 'Signal 3', 'Signal 4', 'Signal 5',
             'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
         widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
@@ -280,7 +280,7 @@ class OOK_capture_basic(gr.top_block, Qt.QWidget):
 
         self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_const_sink_x_0_win)
-        self.blocks_keep_one_in_n_0 = blocks.keep_one_in_n(gr.sizeof_float*1, 50)
+        self.blocks_keep_one_in_n_0 = blocks.keep_one_in_n(gr.sizeof_float*1, 100)
         self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
         self.audio_sink_0 = audio.sink(48000, '', True)
 
@@ -312,7 +312,7 @@ class OOK_capture_basic(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
-        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
+        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate/100)
         self.rtlsdr_source_0.set_sample_rate(self.samp_rate)
 
     def get_center_freq(self):
