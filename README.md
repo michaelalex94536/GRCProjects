@@ -14,7 +14,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 #### OOK_decoder
 "OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domians, in addition to the baseband signal constellation.  In this project we attempt to decode the baseband garage door opener signals.  As the IQ data is provided in a zip file, no external hardware is required.  
 
-The image below shows a zoom of the time domain IQ data that was captured in the "OOK_capture" project.  Holy smokes - the data is not simply OOK - it appears to be Binary FSK modulated (BFSK).  I haven't been able to find any information on this type of decoding for such old garage door openers.  
+The image below shows a zoom of the time domain IQ data that was captured in the "OOK_capture" project.  Holy smokes - the data is not simply OOK - it appears to be Binary FSK modulated (BFSK).  I haven't been able to find any information on this type of decoding for such old garage door openers.  In retrospect, the spectrum seemed to have more than one peak, so I'm not surprised.  
 
 ![Model](https://github.com/michaelalex94536/GRCProjects/blob/main/OOK_decoder/ksnip_20230302-182412.png)
 
