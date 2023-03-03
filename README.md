@@ -14,6 +14,9 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 #### OOK_decoder
 "OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domians, in addition to the baseband signal constellation.  In this project we attempt to decode the baseband garage door opener signals.  As the IQ data is provided in a zip file, no external hardware is required here.  
 
+
+
+![Model](https://github.com/michaelalex94536/GRCProjects/blob/main/OOK_decoder/ksnip_20230302-182412.png)
+
 #### FM_receiver_basic
 "FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station.  This project uses the GRC wide band FM demodulator (WBFM Receive) block.  The user selects the FM station frequency using a slider.  Various time- and frequency-domain signals are displayed. 
-![Model](https://github.com/michaelalex94536/GRCProjects/blob/main/OOK_decoder/ksnip_20230302-182412.png)
