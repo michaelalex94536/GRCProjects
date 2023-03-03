@@ -21,4 +21,4 @@ The image below shows a zoom of the time domain IQ data that was captured in the
 ![Model](https://github.com/michaelalex94536/GRCProjects/blob/main/OOK_decoder/ksnip_20230302-182412.png)
 
 #### FM_receiver_basic
-"FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station.  This project uses the GRC wide band FM demodulator (WBFM Receive) block.  The user selects the FM station frequency using a slider.  Various time- and frequency-domain signals are displayed. 
+"FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station using the PC speaker.  This project uses the GRC wide band FM demodulator (WBFM Receive) block.  The user selects the FM station frequency using a slider.  Various time- and frequency-domain signals are displayed. 
