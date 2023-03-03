@@ -77,14 +77,60 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 2e6
+<<<<<<< HEAD
+        self.dwn_samp_rate = dwn_samp_rate = 200
+        self.center_freq = center_freq = 390.0e6
+=======
         self.center_freq = center_freq = 389.4e6
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
 
         ##################################################
         # Blocks
         ##################################################
+<<<<<<< HEAD
+        self.qtgui_waterfall_sink_x_0 = qtgui.waterfall_sink_c(
+            16384, #size
+            window.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate/2, #bw
+            "", #name
+            1, #number of inputs
+            None # parent
+        )
+        self.qtgui_waterfall_sink_x_0.set_update_time(0.10)
+        self.qtgui_waterfall_sink_x_0.enable_grid(False)
+        self.qtgui_waterfall_sink_x_0.enable_axis_labels(True)
+
+
+
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        colors = [0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_waterfall_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_waterfall_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_waterfall_sink_x_0.set_color_map(i, colors[i])
+            self.qtgui_waterfall_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self.qtgui_waterfall_sink_x_0.set_intensity_range(-140, 10)
+
+        self._qtgui_waterfall_sink_x_0_win = sip.wrapinstance(self.qtgui_waterfall_sink_x_0.qwidget(), Qt.QWidget)
+
+        self.top_layout.addWidget(self._qtgui_waterfall_sink_x_0_win)
+        self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
+            int(800*100/dwn_samp_rate), #size
+            samp_rate/dwn_samp_rate, #samp_rate
+=======
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
             2048, #size
             samp_rate/100, #samp_rate
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
             "", #name
             1, #number of inputs
             None # parent
@@ -95,7 +141,11 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0_0.enable_tags(True)
+<<<<<<< HEAD
+        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 0.3, 0.001, 0, "")
+=======
         self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
         self.qtgui_time_sink_x_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0.enable_grid(False)
         self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
@@ -103,7 +153,11 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0.enable_stem_plot(False)
 
 
+<<<<<<< HEAD
+        labels = ['Downsampled signal', 'Raw signal Im', 'Signal 3', 'Signal 4', 'Signal 5',
+=======
         labels = ['Decimated signal', 'Raw signal Im', 'Signal 3', 'Signal 4', 'Signal 5',
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
             'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
         widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
@@ -131,7 +185,11 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         self._qtgui_time_sink_x_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_0_win)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
+<<<<<<< HEAD
+            2400, #size
+=======
             10000, #size
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
             samp_rate, #samp_rate
             "", #name
             1, #number of inputs
@@ -143,7 +201,11 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0.enable_tags(True)
+<<<<<<< HEAD
+        self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_AUTO, qtgui.TRIG_SLOPE_POS, 0.5, 0.0001, 0, "")
+=======
         self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
         self.qtgui_time_sink_x_0.enable_autoscale(False)
         self.qtgui_time_sink_x_0.enable_grid(False)
         self.qtgui_time_sink_x_0.enable_axis_labels(True)
@@ -182,10 +244,17 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
+<<<<<<< HEAD
+            16384, #size
+            window.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate/2, #bw
+=======
             8192, #size
             window.WIN_BLACKMAN_hARRIS, #wintype
             0, #fc
             samp_rate, #bw
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
             "", #name
             1,
             None # parent
@@ -264,8 +333,13 @@ class OOK_decode(gr.top_block, Qt.QWidget):
 
         self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_const_sink_x_0_win)
+<<<<<<< HEAD
+        self.blocks_keep_one_in_n_0 = blocks.keep_one_in_n(gr.sizeof_float*1, dwn_samp_rate)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/home/michael/Documents/GRC/GRCProjects/OOK_decoder/IQ_2MS_390MHz', True, 0, 0)
+=======
         self.blocks_keep_one_in_n_0 = blocks.keep_one_in_n(gr.sizeof_float*1, 100)
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/home/michael/Documents/GRC/GRCProjects/OOK_decode/IQ_2MS_390MHz', True, 0, 0)
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
         self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
         self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
         self.audio_sink_0 = audio.sink(48000, '', True)
@@ -279,6 +353,10 @@ class OOK_decode(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_file_source_0, 0), (self.qtgui_const_sink_x_0, 0))
         self.connect((self.blocks_file_source_0, 0), (self.qtgui_freq_sink_x_0, 0))
         self.connect((self.blocks_file_source_0, 0), (self.qtgui_time_sink_x_0, 0))
+<<<<<<< HEAD
+        self.connect((self.blocks_file_source_0, 0), (self.qtgui_waterfall_sink_x_0, 0))
+=======
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
         self.connect((self.blocks_keep_one_in_n_0, 0), (self.audio_sink_0, 0))
         self.connect((self.blocks_keep_one_in_n_0, 0), (self.qtgui_time_sink_x_0_0, 0))
 
@@ -296,9 +374,24 @@ class OOK_decode(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+<<<<<<< HEAD
+        self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate/2)
+        self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
+        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate/self.dwn_samp_rate)
+        self.qtgui_waterfall_sink_x_0.set_frequency_range(0, self.samp_rate/2)
+
+    def get_dwn_samp_rate(self):
+        return self.dwn_samp_rate
+
+    def set_dwn_samp_rate(self, dwn_samp_rate):
+        self.dwn_samp_rate = dwn_samp_rate
+        self.blocks_keep_one_in_n_0.set_n(self.dwn_samp_rate)
+        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate/self.dwn_samp_rate)
+=======
         self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate/100)
+>>>>>>> 9449e9b6f17d424480714b88da727d3f8cb4b37b
 
     def get_center_freq(self):
         return self.center_freq
