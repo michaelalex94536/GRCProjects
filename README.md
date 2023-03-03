@@ -19,6 +19,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 The image below shows a zoom of the time domain IQ data that was captured in the "OOK_capture" project.  Holy smokes - the data is not simply OOK - it appears to be Binary FSK modulated (BFSK).  I haven't been able to find any information on this type of decoding for such old garage door openers.  In retrospect, the spectrum seemed to have more than one peak, so I'm not surprised.  I'm still trying to figure the modulation out and will update this project when I do. 
 
 ![Model](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/decoded_image.png)
+##### Complex signal from garage door opener.  It does not appear to be simple OOK.  
 
 #### FM_receiver_basic
 "FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station using the PC speaker.  This project uses the GRC wide band FM demodulator (WBFM Receive) block.  The user selects the FM station frequency using a slider.  Various time- and frequency-domain signals are displayed. 
