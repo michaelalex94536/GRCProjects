@@ -15,7 +15,7 @@ Real and complex signals are generated and displayed in the time- and frequency 
 The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them in the time and frequency domains, and plays the Touch-Tones using the PC speaker. No external hardware is required for this project. 
 
 #### OOK_capture
-"OOK_capture" shows how to use an RTL-SDR dongle to display OOK signals from a very old garage door opener. 
+"OOK_capture" shows how to use an RTL-SDR dongle to display and capture OOK signals from a very old garage door opener. 
 
 #### OOK_decoder
 "OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  
