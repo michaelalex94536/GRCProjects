@@ -1,4 +1,4 @@
 
 #### Signal_generator
-The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them in the time and frequency domains, and plays the Touch-Tones using the PC speaker. No external hardware required. This flowgraph is just a gentle introduction to GNU Radio Companion basics.
+In this flowgraph, we use the GRC Signal Source block to create a complex signal with a frequency of the user's choosing, and display it in the time- and frequency-domains.  We also take the conjugate of the complex signal and add it to itself, eliminating the complex portion of the signal, leaving only a real signal.  We also display real signal in the time- and frequency domains.  
 
