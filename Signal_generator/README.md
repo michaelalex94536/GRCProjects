@@ -19,8 +19,3 @@ For the complex signal, it is easy to show the negative frequency terms cancel, 
 
 ![image](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/complex_signal_eqn.png)  
 
-In the complex signal time plot shown above, 
-
-
-![image](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/real_complex_constellations.png) 
-
