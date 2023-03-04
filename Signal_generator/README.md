@@ -4,3 +4,7 @@ In this flowgraph, we use the GRC Signal Source block to create a complex signal
 
 ![Model](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/Complex_Real_plots.png)
 
+We note the real signal has two peaks in its frequency spectrum, one at a positive frequency and one at a negative frequency, while the complex signal has only one peak at the positive frequency.  This may come across as confusing to some people, so an explanation is in order.  
+
+{func cos %phi} = { 1 } over {2} {[{func e}^{i %phi} + {func e}^{-i %phi}]}
+
