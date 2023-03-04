@@ -17,6 +17,9 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 #### OOK_Tx_simulator
 "OOK_Tx_simulator" shows how to modulate a carrier with digital data using on-off-keying.  No external hardware needed.   
 
+#### OOK_Rx_simulator
+"OOK_Rx_simulator" shows how to very naively demodulate a carrier with digital data using on-off-keying.  No external hardware needed.  
+
 
 
 #### OOK_capture
