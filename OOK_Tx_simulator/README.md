@@ -4,6 +4,6 @@
 
 The baseband signal has 24-bits (0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0).  Here is the digital and transmitted data:
 
-![Signals](https://github.com/michaelalex94536/GRCProjects/Images/OOK_Tx_Simulator_Signals.png)
+![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/OOK_Tx_Simulator_Signals.png)
 
 
