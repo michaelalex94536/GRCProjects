@@ -26,7 +26,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 "OOK_capture" shows how to use an RTL-SDR dongle to display and capture OOK signals from a very old garage door opener. 
 
 #### OOK_decoder
-"OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  
+"OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we use IQ data previously captured and stored in a file.  
 
 #### FM_receiver_basic
 "FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station using the PC speaker.
