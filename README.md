@@ -17,13 +17,16 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 #### OOK_Tx_simulator
 "OOK_Tx_simulator" shows how to modulate a carrier with digital data using on-off-keying.  No external hardware needed.   
 
+#### OOK_Rx_simulator
+"OOK_Rx_simulator" shows how to very naively demodulate a carrier with digital data using on-off-keying.  No external hardware needed.  
+
 
 
 #### OOK_capture
 "OOK_capture" shows how to use an RTL-SDR dongle to display and capture OOK signals from a very old garage door opener. 
 
 #### OOK_decoder
-"OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  
+"OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we use IQ data previously captured and stored in a file.  
 
 #### FM_receiver_basic
 "FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station using the PC speaker.
