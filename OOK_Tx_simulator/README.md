@@ -8,7 +8,7 @@ https://en.wikipedia.org/wiki/On%E2%80%93off_keying
 
 
 
-In this example, the baseband digital signal has 24-bits (0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0).  Here are 2 periods of the digital and transmitted data:
+In this example, the baseband digital signal has 24-bits (0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0).  Here are 2 periods of the digital data and transmitted signal:
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/OOK_Tx_Simulator_Signals.png)
 
