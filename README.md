@@ -10,20 +10,25 @@
 
 ### Projects that don't require external hardware
 
-#### Signal_generator
-Real and complex signals are generated and displayed in the time- and frequency domains.  No external hardware is required for this project. 
+
+#### ASK_Tx_simulator
+"ASK_Tx_simulator" shows how to modulate a carrier with digital data using amplitude-shift keying (ASK).
 
 #### DTMF_generator
-The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them in the time and frequency domains, and plays the Touch-Tones using the PC speaker. No external hardware is required for this project. 
+The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them in the time and frequency domains, and plays the Touch-Tones using the PC speaker. 
 
 #### OOK_Tx_simulator
-"OOK_Tx_simulator" shows how to modulate a carrier with digital data using on-off-keying.  No external hardware needed.   
+"OOK_Tx_simulator" shows how to modulate a carrier with digital data using on-off keying (OOK).     
 
 #### OOK_Rx_simulator
-"OOK_Rx_simulator" shows how to naively demodulate a carrier with digital data using on-off-keying.  No external hardware needed.  
+"OOK_Rx_simulator" shows how to naively demodulate a carrier with digital data using on-off keying (OOK).   
 
 #### OOK_decoder
 "OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we use IQ data previously captured and stored in a file.
+
+#### Signal_generator
+Real and complex signals are generated and displayed in the time- and frequency domains.  
+
 
 ### Projects that require external hardware
 
