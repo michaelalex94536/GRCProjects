@@ -6,6 +6,8 @@
 
 #### Each project description below gives more details about what the project requires, as well as a brief explanation of what's going on.  See the README.md files in each folder for further details.  
 
+#### We note the projects that don't require hardware are rather "naive" in the sense that issues that must be accounted for in real hardware systems: things like clock and timing recovery, phase and frequency misalignment, noise, signal amplitude variations, etc. are completely avoided.  These topics will be addressed in projects that use SDR hardware.  
+
 ### Projects that don't require external hardware
 
 #### Signal_generator
@@ -18,7 +20,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 "OOK_Tx_simulator" shows how to modulate a carrier with digital data using on-off-keying.  No external hardware needed.   
 
 #### OOK_Rx_simulator
-"OOK_Rx_simulator" shows how to very naively demodulate a carrier with digital data using on-off-keying.  No external hardware needed.  
+"OOK_Rx_simulator" shows how to naively demodulate a carrier with digital data using on-off-keying.  No external hardware needed.  
 
 #### OOK_decoder
 "OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we use IQ data previously captured and stored in a file.
