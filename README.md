@@ -11,7 +11,7 @@
 
 #
 #### Brief introduction
-GNU Radio Companion uses a graphical user interface, very similar to Simulink or Labview, that allows the user to implement a variety of signal processing algorithms.  The user creates a "flow graph" by dragging-and-dropping blocks, and then connecting them with wires in order to execute the desired algorithm.  Running the flow graph creates a Python script that actually implements the algorithm.  
+GNU Radio Companion uses a graphical user interface, very similar to Simulink or Labview, that allows the user to implement a variety of signal processing algorithms.  The user creates a "flow graph" by dragging-and-dropping blocks, and then connects them with wires.  Running the flow graph creates a Python script that actually implements the algorithm.  
 
 #
 #### References
