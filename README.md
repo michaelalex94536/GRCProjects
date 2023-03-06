@@ -8,9 +8,6 @@
 https://wiki.gnuradio.org/index.php?title=Main_Page
 
 
-
-
-
 #### Each project description below gives more details about what the project requires, as well as a brief explanation of what's going on.  See the README.md files in each folder for further details.  
 
 #### We note the projects that don't require hardware are rather "naive" in the sense that issues that must be accounted for in real hardware systems: things like clock and timing recovery, phase and frequency misalignment, noise, signal amplitude variations, etc. are completely avoided.  These topics will be addressed in projects that use SDR hardware.  
