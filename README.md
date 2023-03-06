@@ -10,11 +10,11 @@
 #### We note the projects that don't require hardware are rather "naive" in the sense that issues that must be accounted for in real hardware systems: things like clock and timing recovery, phase and frequency misalignment, noise, signal amplitude variations, etc. are completely avoided.  These topics will be addressed in projects that use SDR hardware.  
 
 #### References
-https://wiki.gnuradio.org/index.php/InstallingGR
+Installing: https://wiki.gnuradio.org/index.php/InstallingGR
 
-https://wiki.gnuradio.org/index.php?title=Main_Page
+GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
 
-https://en.wikipedia.org/wiki/Software-defined_radio
+Software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
 
 ### Projects that don't require external hardware
 
