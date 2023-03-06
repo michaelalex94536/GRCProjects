@@ -1,6 +1,6 @@
 # GRCProjects
 
-## NU Radio Companion (GRC) projects
+## GNU Radio Companion (GRC) projects
 
 #### Developed and tested using GNU Radio Companion 3.10.1.1 on a Linux system using Ubuntu 22.04.2 LTS.  Some of the projects require the use of an RTL-SDR dongle (or equivalent) for capturing signals from the air, or a transmitter like a HackRF or ADALM-Pluto for signal transmission.  Each project folder contains a *.grc file, it's corresponding *.py file, a *.pdf file that shows the project flowgraph and a README.md file.  Some folders might contain several related projects, or supporting files for the project.  
 
@@ -12,9 +12,12 @@
 #### References
 Installing GNU Radio Companion: https://wiki.gnuradio.org/index.php/InstallingGR
 
-GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
+About GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
 
-Software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
+About software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
+
+#
+#
 
 ### Projects that don't require external hardware
 
