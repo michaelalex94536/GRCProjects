@@ -4,13 +4,13 @@
 
 #### Developed and tested using GNU Radio Companion 3.10.1.1 on a Linux system using Ubuntu 22.04.2 LTS.  Some of the projects require the use of an RTL-SDR dongle (or equivalent) for capturing signals from the air, or a transmitter like a HackRF or ADALM-Pluto for signal transmission.  Each project folder contains a *.grc file, it's corresponding *.py file, a *.pdf file that shows the project flowgraph and a README.md file.  Some folders might contain several related projects, or supporting files for the project.  
 
-#### References
-https://wiki.gnuradio.org/index.php?title=Main_Page
-
 
 #### Each project description below gives more details about what the project requires, as well as a brief explanation of what's going on.  See the README.md files in each folder for further details.  
 
 #### We note the projects that don't require hardware are rather "naive" in the sense that issues that must be accounted for in real hardware systems: things like clock and timing recovery, phase and frequency misalignment, noise, signal amplitude variations, etc. are completely avoided.  These topics will be addressed in projects that use SDR hardware.  
+
+#### References
+https://wiki.gnuradio.org/index.php?title=Main_Page
 
 ### Projects that don't require external hardware
 
