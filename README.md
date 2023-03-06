@@ -9,6 +9,7 @@
 
 #### We note the projects that don't require hardware are rather "naive" in the sense that issues that must be accounted for in real hardware systems: things like clock and timing recovery, phase and frequency misalignment, noise, signal amplitude variations, etc. are completely avoided.  These topics will be addressed in projects that use SDR hardware.  
 
+#
 #### References
 Installing GNU Radio Companion: https://wiki.gnuradio.org/index.php/InstallingGR
 
@@ -17,8 +18,6 @@ About GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
 About software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
 
 #
-#
-
 ### Projects that don't require external hardware
 
 #### ASK_Tx_simulator
@@ -39,7 +38,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 #### Signal_generator
 Real and complex signals are generated and displayed in the time- and frequency domains.  
 
-
+#
 ### Projects that require external hardware
 
 #### OOK_capture
