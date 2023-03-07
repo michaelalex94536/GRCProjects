@@ -33,18 +33,27 @@ options:
     state: enabled
 
 blocks:
-- name: freq
-  id: variable
+- name: rx_freq
+  id: variable_qtgui_range
   parameters:
     comment: ''
+    gui_hint: 1,0,1,2
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 1e3
+    step: 1e3
+    stop: 500e3
     value: 223e3
+    widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [336, 12.0]
+    coordinate: [168, 484.0]
     rotation: 0
-    state: enabled
+    state: true
 - name: samp_rate
   id: variable
   parameters:
@@ -54,7 +63,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 12]
+    coordinate: [104, 84.0]
     rotation: 0
     state: enabled
 - name: samps_per_sym
@@ -66,9 +75,49 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [464, 20.0]
+    coordinate: [576, 20.0]
     rotation: 0
     state: enabled
+- name: tx_freq
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: 0,0,1,2
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 1e3
+    step: 1e3
+    stop: 500e3
+    value: 223e3
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 4.0]
+    rotation: 0
+    state: true
+- name: analog_noise_source_x_0
+  id: analog_noise_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '0.150'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_type: analog.GR_GAUSSIAN
+    seed: '0'
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [368, 84.0]
+    rotation: 0
+    state: true
 - name: analog_sig_source_x_0
   id: analog_sig_source_x
   parameters:
@@ -76,7 +125,7 @@ blocks:
     alias: ''
     amp: '1'
     comment: ''
-    freq: freq
+    freq: tx_freq
     maxoutbuf: '0'
     minoutbuf: '0'
     offset: '0'
@@ -91,38 +140,44 @@ blocks:
     coordinate: [40, 332.0]
     rotation: 0
     state: true
-- name: blocks_complex_to_mag_0
-  id: blocks_complex_to_mag
+- name: analog_sig_source_x_0_0
+  id: analog_sig_source_x
   parameters:
     affinity: ''
     alias: ''
+    amp: '1'
     comment: ''
+    freq: -rx_freq
     maxoutbuf: '0'
     minoutbuf: '0'
-    vlen: '1'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: complex
+    waveform: analog.GR_COS_WAVE
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [640, 288.0]
+    coordinate: [424, 460.0]
     rotation: 0
     state: true
-- name: blocks_keep_one_in_n_0
-  id: blocks_keep_one_in_n
+- name: blocks_add_xx_0
+  id: blocks_add_xx
   parameters:
     affinity: ''
     alias: ''
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    n: samps_per_sym
-    type: float
+    num_inputs: '2'
+    type: complex
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [848, 312.0]
+    coordinate: [640, 120.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0
@@ -140,7 +195,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488, 248.0]
+    coordinate: [456, 176.0]
+    rotation: 0
+    state: true
+- name: blocks_multiply_xx_0_0
+  id: blocks_multiply_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [728, 456.0]
     rotation: 0
     state: true
 - name: blocks_repeat_0
@@ -158,7 +231,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [280, 172.0]
+    coordinate: [264, 172.0]
     rotation: 0
     state: true
 - name: blocks_throttle_0
@@ -177,7 +250,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [400, 396.0]
+    coordinate: [360, 372.0]
     rotation: 0
     state: true
 - name: blocks_vector_source_x_0
@@ -199,6 +272,98 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [40, 156.0]
+    rotation: 0
+    state: true
+- name: qtgui_const_sink_x_0_0
+  id: qtgui_const_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: '"blue"'
+    color10: '"red"'
+    color2: '"red"'
+    color3: '"red"'
+    color4: '"red"'
+    color5: '"red"'
+    color6: '"red"'
+    color7: '"red"'
+    color8: '"red"'
+    color9: '"red"'
+    comment: ''
+    grid: 'False'
+    gui_hint: 4,0,1,2
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    name: '"Received constellation"'
+    nconnections: '1'
+    size: '1024'
+    style1: '0'
+    style10: '0'
+    style2: '0'
+    style3: '0'
+    style4: '0'
+    style5: '0'
+    style6: '0'
+    style7: '0'
+    style8: '0'
+    style9: '0'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '2'
+    xmin: '-2'
+    ymax: '2'
+    ymin: '-2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [888, 460.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -232,7 +397,7 @@ blocks:
     ctrlpanel: 'False'
     entags: 'False'
     grid: 'False'
-    gui_hint: 0,0,1,2
+    gui_hint: 2,0,1,2
     label1: Re
     label10: Signal 10
     label2: Im
@@ -295,7 +460,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [648, 108.0]
+    coordinate: [760, 100.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0_0
@@ -313,7 +478,7 @@ blocks:
     alpha7: '1.0'
     alpha8: '1.0'
     alpha9: '1.0'
-    autoscale: 'True'
+    autoscale: 'False'
     axislabels: 'True'
     color1: blue
     color10: dark blue
@@ -327,9 +492,9 @@ blocks:
     color9: dark green
     comment: ''
     ctrlpanel: 'False'
-    entags: 'True'
+    entags: 'False'
     grid: 'False'
-    gui_hint: 1,0,1,2
+    gui_hint: 3,0,1,2
     label1: Re
     label10: Signal 10
     label2: Im
@@ -372,7 +537,7 @@ blocks:
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
-    type: float
+    type: complex
     update_time: '0.10'
     width1: '1'
     width10: '1'
@@ -392,115 +557,20 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [928, 100.0]
-    rotation: 0
-    state: true
-- name: qtgui_time_sink_x_0_0_0_0
-  id: qtgui_time_sink_x
-  parameters:
-    affinity: ''
-    alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'False'
-    axislabels: 'False'
-    color1: blue
-    color10: dark blue
-    color2: red
-    color3: green
-    color4: black
-    color5: cyan
-    color6: magenta
-    color7: yellow
-    color8: dark red
-    color9: dark green
-    comment: ''
-    ctrlpanel: 'False'
-    entags: 'False'
-    grid: 'False'
-    gui_hint: 2,0,1,2
-    label1: Re
-    label10: Signal 10
-    label2: Im
-    label3: Signal 3
-    label4: Signal 4
-    label5: Signal 5
-    label6: Signal 6
-    label7: Signal 7
-    label8: Signal 8
-    label9: Signal 9
-    legend: 'True'
-    marker1: '0'
-    marker10: '-1'
-    marker2: '-1'
-    marker3: '-1'
-    marker4: '-1'
-    marker5: '-1'
-    marker6: '-1'
-    marker7: '-1'
-    marker8: '-1'
-    marker9: '-1'
-    name: '"Received bits"'
-    nconnections: '1'
-    size: '70'
-    srate: samp_rate
-    stemplot: 'True'
-    style1: '1'
-    style10: '1'
-    style2: '1'
-    style3: '1'
-    style4: '1'
-    style5: '1'
-    style6: '1'
-    style7: '1'
-    style8: '1'
-    style9: '1'
-    tr_chan: '0'
-    tr_delay: 7e6
-    tr_level: '0.5'
-    tr_mode: qtgui.TRIG_MODE_NORM
-    tr_slope: qtgui.TRIG_SLOPE_POS
-    tr_tag: '""'
-    type: float
-    update_time: '0.10'
-    width1: '1'
-    width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    ylabel: Amplitude
-    ymax: '1.1'
-    ymin: '-0.1'
-    yunit: '""'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [984, 348.0]
+    coordinate: [888, 356.0]
     rotation: 0
     state: true
 
 connections:
+- [analog_noise_source_x_0, '0', blocks_add_xx_0, '0']
 - [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '1']
 - [analog_sig_source_x_0, '0', blocks_throttle_0, '0']
-- [blocks_complex_to_mag_0, '0', blocks_keep_one_in_n_0, '0']
-- [blocks_complex_to_mag_0, '0', qtgui_time_sink_x_0_0_0, '0']
-- [blocks_keep_one_in_n_0, '0', qtgui_time_sink_x_0_0_0_0, '0']
-- [blocks_multiply_xx_0, '0', blocks_complex_to_mag_0, '0']
-- [blocks_multiply_xx_0, '0', qtgui_time_sink_x_0_0, '0']
+- [analog_sig_source_x_0_0, '0', blocks_multiply_xx_0_0, '1']
+- [blocks_add_xx_0, '0', blocks_multiply_xx_0_0, '0']
+- [blocks_add_xx_0, '0', qtgui_time_sink_x_0_0, '0']
+- [blocks_multiply_xx_0, '0', blocks_add_xx_0, '1']
+- [blocks_multiply_xx_0_0, '0', qtgui_const_sink_x_0_0, '0']
+- [blocks_multiply_xx_0_0, '0', qtgui_time_sink_x_0_0_0, '0']
 - [blocks_repeat_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_vector_source_x_0, '0', blocks_repeat_0, '0']
 
