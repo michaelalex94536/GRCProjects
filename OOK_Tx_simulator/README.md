@@ -12,5 +12,4 @@ In this example, the baseband digital signal has 24-bits (0, 1, 0, 1, 0, 1, 0, 1
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/OOK_Tx_Simulator_Signals.png)
 
-The constellation plot in the flowgraph clearly shows we only have 1' and 0's in the data pattern (not shown here). 
 
