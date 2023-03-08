@@ -25,7 +25,10 @@ About software-defined radio: https://en.wikipedia.org/wiki/Software-defined_rad
 ### Projects that don't require external hardware
 
 #### ASK_Tx_simulator
-"ASK_Tx_simulator" shows how to modulate a carrier with digital data using amplitude-shift keying (ASK).
+"ASK_Tx_simulator" shows how to modulate a carrier with digital data using amplitude-shift keying (ASK). 
+
+#### ASK_Rx_simulator
+"ASK_Rx_simulator" shows how to demodulate a carrier with digital data using amplitude-shift keying (ASK).
 
 #### DTMF_generator
 The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them in the time and frequency domains, and plays the Touch-Tones using the PC speaker. 
@@ -34,7 +37,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 "OOK_Tx_simulator" shows how to modulate a carrier with digital data using on-off keying (OOK).     
 
 #### OOK_Rx_simulator
-"OOK_Rx_simulator" shows how to naively demodulate a carrier with digital data using on-off keying (OOK).   
+"OOK_Rx_simulator" shows how to demodulate a carrier with digital data using on-off keying (OOK).   
 
 #### OOK_decoder
 "OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we use IQ data previously captured and stored in a file.
