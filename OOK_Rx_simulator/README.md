@@ -9,4 +9,4 @@ From the constellation plot below, we see the 0's and 1's are distinguishable, e
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/OOK_Rx_Simulator_Constellation.png)
 
-To receive and demodulate an OOK signal successfully in the real world, we need to determine the symbol time - the duration of a 1 or a 0, as well as lock-in to the correct modulation frequency AND phase.  
+To receive and demodulate an OOK signal successfully in the real world, we need to lock-in to the correct modulation frequency AND phase.  More on this as we go along. 
