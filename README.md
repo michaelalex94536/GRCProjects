@@ -21,6 +21,8 @@ About GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
 
 About software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
 
+DSP and SDR using Python: https://pysdr.org/index.html
+
 #
 ### Projects that don't require external hardware
 
