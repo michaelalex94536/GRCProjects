@@ -219,7 +219,7 @@ class OOK_Rx_simulator(gr.top_block, Qt.QWidget):
         self.qtgui_const_sink_x_0_0.set_x_axis(-2, 2)
         self.qtgui_const_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
         self.qtgui_const_sink_x_0_0.enable_autoscale(False)
-        self.qtgui_const_sink_x_0_0.enable_grid(False)
+        self.qtgui_const_sink_x_0_0.enable_grid(True)
         self.qtgui_const_sink_x_0_0.enable_axis_labels(True)
 
 

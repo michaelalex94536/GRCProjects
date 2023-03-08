@@ -51,7 +51,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [168, 484.0]
+    coordinate: [184, 540.0]
     rotation: 0
     state: true
 - name: samp_rate
@@ -159,7 +159,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [424, 460.0]
+    coordinate: [432, 524.0]
     rotation: 0
     state: true
 - name: blocks_add_xx_0
@@ -213,7 +213,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 456.0]
+    coordinate: [728, 536.0]
     rotation: 0
     state: true
 - name: blocks_repeat_0
@@ -302,7 +302,7 @@ blocks:
     color8: '"red"'
     color9: '"red"'
     comment: ''
-    grid: 'False'
+    grid: 'True'
     gui_hint: 4,0,1,2
     label1: ''
     label10: ''
@@ -363,7 +363,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [888, 460.0]
+    coordinate: [896, 532.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -557,7 +557,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [888, 356.0]
+    coordinate: [912, 420.0]
     rotation: 0
     state: true
 
