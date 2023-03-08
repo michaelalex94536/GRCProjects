@@ -11,7 +11,7 @@ options:
     gen_linking: dynamic
     generate_options: qt_gui
     hier_block_src_path: '.:'
-    id: ASK_Tx_simulator
+    id: ASK_Rx_simulator
     max_nouts: '0'
     output_language: python
     placement: (0,0)
@@ -22,7 +22,7 @@ options:
     run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
-    title: Simulate ASK transmission
+    title: Simulate ASK reception
     window_size: (1000,1000)
   states:
     bus_sink: false
@@ -83,7 +83,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    amp: '0.10'
+    amp: '0.020'
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -94,7 +94,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [224, 236.0]
+    coordinate: [632, 68.0]
     rotation: 0
     state: true
 - name: analog_sig_source_x_0
@@ -116,7 +116,29 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [40, 332.0]
+    coordinate: [56, 260.0]
+    rotation: 0
+    state: true
+- name: analog_sig_source_x_0_0
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    freq: -freq
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: complex
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [520, 388.0]
     rotation: 0
     state: true
 - name: blocks_add_xx_0
@@ -134,7 +156,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [384, 336.0]
+    coordinate: [848, 88.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0
@@ -152,7 +174,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488, 248.0]
+    coordinate: [680, 232.0]
+    rotation: 0
+    state: true
+- name: blocks_multiply_xx_0_0
+  id: blocks_multiply_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [816, 400.0]
     rotation: 0
     state: true
 - name: blocks_repeat_0
@@ -189,7 +229,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [272, 532.0]
+    coordinate: [296, 476.0]
     rotation: 0
     state: true
 - name: blocks_vector_source_x_0
@@ -209,7 +249,99 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [40, 156.0]
+    coordinate: [24, 156.0]
+    rotation: 0
+    state: true
+- name: qtgui_const_sink_x_0_0_0
+  id: qtgui_const_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: '"blue"'
+    color10: '"red"'
+    color2: '"red"'
+    color3: '"red"'
+    color4: '"red"'
+    color5: '"red"'
+    color6: '"red"'
+    color7: '"red"'
+    color8: '"red"'
+    color9: '"red"'
+    comment: ''
+    grid: 'False'
+    gui_hint: 4,0,1,2
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    name: '"Demodulated signal constellation"'
+    nconnections: '1'
+    size: '1024'
+    style1: '0'
+    style10: '0'
+    style2: '0'
+    style3: '0'
+    style4: '0'
+    style5: '0'
+    style6: '0'
+    style7: '0'
+    style8: '0'
+    style9: '0'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '1.25'
+    xmin: '0'
+    ymax: '0.25'
+    ymin: '-0.25'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [960, 396.0]
     rotation: 0
     state: true
 - name: qtgui_freq_sink_x_0_0
@@ -290,7 +422,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [736, 244.0]
+    coordinate: [960, 252.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -348,7 +480,7 @@ blocks:
     marker9: '-1'
     name: '"Transmitted signal"'
     nconnections: '1'
-    size: '1024'
+    size: '2200'
     srate: samp_rate
     stemplot: 'False'
     style1: '1'
@@ -363,7 +495,7 @@ blocks:
     style9: '1'
     tr_chan: '0'
     tr_delay: 25e-6
-    tr_level: '0.30'
+    tr_level: '0.15'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
@@ -387,7 +519,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [744, 132.0]
+    coordinate: [960, 148.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0_0
@@ -445,7 +577,7 @@ blocks:
     marker9: '-1'
     name: '"Modulating signal"'
     nconnections: '1'
-    size: '1024'
+    size: '2200'
     srate: samp_rate
     stemplot: 'False'
     style1: '1'
@@ -460,7 +592,7 @@ blocks:
     style9: '1'
     tr_chan: '0'
     tr_delay: 25e-6
-    tr_level: '0.30'
+    tr_level: '0.15'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
@@ -484,17 +616,20 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [472, 116.0]
+    coordinate: [480, 92.0]
     rotation: 0
     state: true
 
 connections:
 - [analog_noise_source_x_0, '0', blocks_add_xx_0, '0']
-- [analog_sig_source_x_0, '0', blocks_add_xx_0, '1']
+- [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '1']
 - [analog_sig_source_x_0, '0', blocks_throttle_0, '0']
-- [blocks_add_xx_0, '0', blocks_multiply_xx_0, '1']
-- [blocks_multiply_xx_0, '0', qtgui_freq_sink_x_0_0, '0']
-- [blocks_multiply_xx_0, '0', qtgui_time_sink_x_0_0, '0']
+- [analog_sig_source_x_0_0, '0', blocks_multiply_xx_0_0, '1']
+- [blocks_add_xx_0, '0', blocks_multiply_xx_0_0, '0']
+- [blocks_multiply_xx_0, '0', blocks_add_xx_0, '1']
+- [blocks_multiply_xx_0_0, '0', qtgui_const_sink_x_0_0_0, '0']
+- [blocks_multiply_xx_0_0, '0', qtgui_freq_sink_x_0_0, '0']
+- [blocks_multiply_xx_0_0, '0', qtgui_time_sink_x_0_0, '0']
 - [blocks_repeat_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_repeat_0, '0', qtgui_time_sink_x_0_0_0, '0']
 - [blocks_vector_source_x_0, '0', blocks_repeat_0, '0']
