@@ -84,14 +84,14 @@ class OOK_Rx_simulator(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self._tx_freq_range = Range(1e3, 500e3, 1e3, 223e3, 200)
+        self._tx_freq_range = Range(1e3, 500e3, 1, 223e3, 200)
         self._tx_freq_win = RangeWidget(self._tx_freq_range, self.set_tx_freq, "'tx_freq'", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_grid_layout.addWidget(self._tx_freq_win, 0, 0, 1, 2)
         for r in range(0, 1):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self._rx_freq_range = Range(1e3, 500e3, 1e3, 223e3, 200)
+        self._rx_freq_range = Range(1e3, 500e3, 1, 223e3, 200)
         self._rx_freq_win = RangeWidget(self._rx_freq_range, self.set_rx_freq, "'rx_freq'", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_grid_layout.addWidget(self._rx_freq_win, 1, 0, 1, 2)
         for r in range(1, 2):

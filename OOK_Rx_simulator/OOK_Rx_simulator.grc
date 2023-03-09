@@ -43,7 +43,7 @@ blocks:
     orient: QtCore.Qt.Horizontal
     rangeType: float
     start: 1e3
-    step: 1e3
+    step: '1'
     stop: 500e3
     value: 223e3
     widget: counter_slider
@@ -88,7 +88,7 @@ blocks:
     orient: QtCore.Qt.Horizontal
     rangeType: float
     start: 1e3
-    step: 1e3
+    step: '1'
     stop: 500e3
     value: 223e3
     widget: counter_slider
