@@ -10,11 +10,11 @@
 #### We note the projects that don't require hardware are rather "naive" in the sense that issues that must be accounted for in real hardware systems: things like clock and timing recovery, phase and frequency misalignment, noise, signal amplitude variations, etc. are completely avoided.  These topics will be addressed in projects that use SDR hardware.  
 
 #
-#### Brief introductionto GNU Radio Companion
+### Brief introductionto GNU Radio Companion
 GNU Radio Companion (GRC) uses a graphical user interface, very similar to Simulink or Labview, that allows the user to implement a variety of signal processing algorithms.  The user creates a "flow graph" by dragging-and-dropping blocks, and then connects the blocks with wires.  Running the flow graph creates a Python script that actually implements the algorithm.  In GRC there are blocks for displaying time- and frequency domain data, as well as for using and configuring hardware, such as the PC microphone and speaker, in addition to SDR hardware used for signal transmission and reception through the air.  
 
 #
-#### References
+### References
 Installing GNU Radio Companion: https://wiki.gnuradio.org/index.php/InstallingGR
 
 About GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
