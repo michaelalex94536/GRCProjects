@@ -83,7 +83,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    amp: '0.020'
+    amp: '0.25'
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -94,7 +94,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [632, 68.0]
+    coordinate: [608, 20.0]
     rotation: 0
     state: true
 - name: analog_sig_source_x_0
@@ -156,7 +156,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [848, 88.0]
+    coordinate: [808, 72.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0
@@ -243,7 +243,7 @@ blocks:
     repeat: 'True'
     tags: '[]'
     type: complex
-    vector: (1/4, 2/4, 3/4, 4/4)
+    vector: (-3, -1, 1, 3, -1, -1,-1, -1, -1,  -1, 3, 3, 3, -3, 3)
     vlen: '1'
   states:
     bus_sink: false
@@ -305,7 +305,7 @@ blocks:
     marker9: '0'
     name: '"Demodulated signal constellation"'
     nconnections: '1'
-    size: '1024'
+    size: '4096'
     style1: '0'
     style10: '0'
     style2: '0'
@@ -333,10 +333,10 @@ blocks:
     width7: '1'
     width8: '1'
     width9: '1'
-    xmax: '1.25'
-    xmin: '0'
-    ymax: '0.25'
-    ymin: '-0.25'
+    xmax: '4.0'
+    xmin: '-4.0'
+    ymax: '4'
+    ymin: '-4'
   states:
     bus_sink: false
     bus_source: false
@@ -494,8 +494,8 @@ blocks:
     style8: '1'
     style9: '1'
     tr_chan: '0'
-    tr_delay: 25e-6
-    tr_level: '0.15'
+    tr_delay: 800e-6
+    tr_level: '2.0'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
@@ -591,9 +591,9 @@ blocks:
     style8: '1'
     style9: '1'
     tr_chan: '0'
-    tr_delay: 25e-6
-    tr_level: '0.15'
-    tr_mode: qtgui.TRIG_MODE_NORM
+    tr_delay: 800e-6
+    tr_level: '2.0'
+    tr_mode: qtgui.TRIG_MODE_AUTO
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex

@@ -203,7 +203,7 @@ blocks:
     repeat: 'True'
     tags: '[]'
     type: complex
-    vector: (1/4, 2/4, 3/4, 4/4)
+    vector: (-3, -1, 1, 3, -1, -1,-1, -1, -1,  -1, 3, 3, 3, -3, 3)
     vlen: '1'
   states:
     bus_sink: false
@@ -348,7 +348,7 @@ blocks:
     marker9: '-1'
     name: '"Transmitted signal"'
     nconnections: '1'
-    size: '1024'
+    size: '2000'
     srate: samp_rate
     stemplot: 'False'
     style1: '1'
@@ -362,8 +362,8 @@ blocks:
     style8: '1'
     style9: '1'
     tr_chan: '0'
-    tr_delay: 25e-6
-    tr_level: '0.30'
+    tr_delay: 600e-6
+    tr_level: '2'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
@@ -445,7 +445,7 @@ blocks:
     marker9: '-1'
     name: '"Modulating signal"'
     nconnections: '1'
-    size: '1024'
+    size: '2000'
     srate: samp_rate
     stemplot: 'False'
     style1: '1'
@@ -459,8 +459,8 @@ blocks:
     style8: '1'
     style9: '1'
     tr_chan: '0'
-    tr_delay: 25e-6
-    tr_level: '0.30'
+    tr_delay: 600e-6
+    tr_level: '2'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'

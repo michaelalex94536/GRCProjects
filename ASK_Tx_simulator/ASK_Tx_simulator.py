@@ -91,7 +91,7 @@ class ASK_Tx_simulator(gr.top_block, Qt.QWidget):
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0_0_0 = qtgui.time_sink_c(
-            1024, #size
+            2000, #size
             samp_rate, #samp_rate
             "Modulating signal", #name
             1, #number of inputs
@@ -103,7 +103,7 @@ class ASK_Tx_simulator(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0_0_0.enable_tags(True)
-        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 0.30, 25e-6, 0, "")
+        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 2, 600e-6, 0, "")
         self.qtgui_time_sink_x_0_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0_0.enable_grid(False)
         self.qtgui_time_sink_x_0_0_0.enable_axis_labels(True)
@@ -146,7 +146,7 @@ class ASK_Tx_simulator(gr.top_block, Qt.QWidget):
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
-            1024, #size
+            2000, #size
             samp_rate, #samp_rate
             "Transmitted signal", #name
             1, #number of inputs
@@ -158,7 +158,7 @@ class ASK_Tx_simulator(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0_0.enable_tags(True)
-        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 0.30, 25e-6, 0, "")
+        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 2, 600e-6, 0, "")
         self.qtgui_time_sink_x_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0.enable_grid(False)
         self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
@@ -246,7 +246,7 @@ class ASK_Tx_simulator(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.blocks_vector_source_x_0 = blocks.vector_source_c((1/4, 2/4, 3/4, 4/4), True, 1, [])
+        self.blocks_vector_source_x_0 = blocks.vector_source_c((-3, -1, 1, 3, -1, -1,-1, -1, -1,  -1, 3, 3, 3, -3, 3), True, 1, [])
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_repeat_0 = blocks.repeat(gr.sizeof_gr_complex*1, samps_per_sym)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)

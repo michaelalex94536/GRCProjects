@@ -103,7 +103,7 @@ class ASK_Rx_simulator(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0_0_0.enable_tags(True)
-        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 0.15, 25e-6, 0, "")
+        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_AUTO, qtgui.TRIG_SLOPE_POS, 2.0, 800e-6, 0, "")
         self.qtgui_time_sink_x_0_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0_0.enable_grid(False)
         self.qtgui_time_sink_x_0_0_0.enable_axis_labels(True)
@@ -158,7 +158,7 @@ class ASK_Rx_simulator(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0_0.enable_tags(True)
-        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 0.15, 25e-6, 0, "")
+        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_NORM, qtgui.TRIG_SLOPE_POS, 2.0, 800e-6, 0, "")
         self.qtgui_time_sink_x_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0.enable_grid(False)
         self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
@@ -247,14 +247,14 @@ class ASK_Rx_simulator(gr.top_block, Qt.QWidget):
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_const_sink_x_0_0_0 = qtgui.const_sink_c(
-            1024, #size
+            4096, #size
             "Demodulated signal constellation", #name
             1, #number of inputs
             None # parent
         )
         self.qtgui_const_sink_x_0_0_0.set_update_time(0.10)
-        self.qtgui_const_sink_x_0_0_0.set_y_axis(-0.25, 0.25)
-        self.qtgui_const_sink_x_0_0_0.set_x_axis(0, 1.25)
+        self.qtgui_const_sink_x_0_0_0.set_y_axis(-4, 4)
+        self.qtgui_const_sink_x_0_0_0.set_x_axis(-4.0, 4.0)
         self.qtgui_const_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
         self.qtgui_const_sink_x_0_0_0.enable_autoscale(False)
         self.qtgui_const_sink_x_0_0_0.enable_grid(False)
@@ -291,7 +291,7 @@ class ASK_Rx_simulator(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.blocks_vector_source_x_0 = blocks.vector_source_c((1/4, 2/4, 3/4, 4/4), True, 1, [])
+        self.blocks_vector_source_x_0 = blocks.vector_source_c((-3, -1, 1, 3, -1, -1,-1, -1, -1,  -1, 3, 3, 3, -3, 3), True, 1, [])
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_repeat_0 = blocks.repeat(gr.sizeof_gr_complex*1, samps_per_sym)
         self.blocks_multiply_xx_0_0 = blocks.multiply_vcc(1)
@@ -299,7 +299,7 @@ class ASK_Rx_simulator(gr.top_block, Qt.QWidget):
         self.blocks_add_xx_0 = blocks.add_vcc(1)
         self.analog_sig_source_x_0_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, -freq, 1, 0, 0)
         self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, freq, 1, 0, 0)
-        self.analog_noise_source_x_0 = analog.noise_source_c(analog.GR_GAUSSIAN, 0.020, 0)
+        self.analog_noise_source_x_0 = analog.noise_source_c(analog.GR_GAUSSIAN, 0.25, 0)
 
 
         ##################################################
