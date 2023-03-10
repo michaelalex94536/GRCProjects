@@ -258,7 +258,9 @@ class OOK_Rx_simulator(gr.top_block, Qt.QWidget):
         self.blocks_repeat_0 = blocks.repeat(gr.sizeof_gr_complex*1, samps_per_sym)
         self.blocks_multiply_xx_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_cc(2)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
+        self.blocks_add_const_vxx_0 = blocks.add_const_cc(-1)
         self.analog_sig_source_x_0_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, -rx_freq, 1, 0, 0)
         self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, tx_freq, 1, 0, 0)
         self.analog_noise_source_x_0 = analog.noise_source_c(analog.GR_GAUSSIAN, 0.150, 0)
@@ -271,13 +273,15 @@ class OOK_Rx_simulator(gr.top_block, Qt.QWidget):
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_multiply_xx_0, 1))
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.analog_sig_source_x_0_0, 0), (self.blocks_multiply_xx_0_0, 1))
+        self.connect((self.blocks_add_const_vxx_0, 0), (self.blocks_repeat_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.blocks_multiply_xx_0_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.qtgui_time_sink_x_0_0, 0))
+        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_add_const_vxx_0, 0))
         self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.blocks_multiply_xx_0_0, 0), (self.qtgui_const_sink_x_0_0, 0))
         self.connect((self.blocks_multiply_xx_0_0, 0), (self.qtgui_time_sink_x_0_0_0, 0))
         self.connect((self.blocks_repeat_0, 0), (self.blocks_multiply_xx_0, 0))
-        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_repeat_0, 0))
+        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_multiply_const_vxx_0, 0))
 
 
     def closeEvent(self, event):

@@ -51,7 +51,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 540.0]
+    coordinate: [664, 404.0]
     rotation: 0
     state: true
 - name: samp_rate
@@ -115,7 +115,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [368, 84.0]
+    coordinate: [584, 84.0]
     rotation: 0
     state: true
 - name: analog_sig_source_x_0
@@ -159,7 +159,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [432, 524.0]
+    coordinate: [656, 524.0]
+    rotation: 0
+    state: true
+- name: blocks_add_const_vxx_0
+  id: blocks_add_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '-1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [376, 172.0]
     rotation: 0
     state: true
 - name: blocks_add_xx_0
@@ -177,7 +195,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [640, 120.0]
+    coordinate: [856, 120.0]
+    rotation: 0
+    state: true
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 172.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0
@@ -195,7 +231,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [456, 176.0]
+    coordinate: [672, 176.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0_0
@@ -213,7 +249,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 536.0]
+    coordinate: [944, 536.0]
     rotation: 0
     state: true
 - name: blocks_repeat_0
@@ -231,7 +267,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [264, 172.0]
+    coordinate: [496, 172.0]
     rotation: 0
     state: true
 - name: blocks_throttle_0
@@ -271,7 +307,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [40, 156.0]
+    coordinate: [24, 156.0]
     rotation: 0
     state: true
 - name: qtgui_const_sink_x_0_0
@@ -363,7 +399,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [896, 532.0]
+    coordinate: [1112, 532.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -460,7 +496,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [760, 100.0]
+    coordinate: [976, 100.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0_0
@@ -557,7 +593,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [912, 420.0]
+    coordinate: [1128, 420.0]
     rotation: 0
     state: true
 
@@ -566,13 +602,15 @@ connections:
 - [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '1']
 - [analog_sig_source_x_0, '0', blocks_throttle_0, '0']
 - [analog_sig_source_x_0_0, '0', blocks_multiply_xx_0_0, '1']
+- [blocks_add_const_vxx_0, '0', blocks_repeat_0, '0']
 - [blocks_add_xx_0, '0', blocks_multiply_xx_0_0, '0']
 - [blocks_add_xx_0, '0', qtgui_time_sink_x_0_0, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_add_const_vxx_0, '0']
 - [blocks_multiply_xx_0, '0', blocks_add_xx_0, '1']
 - [blocks_multiply_xx_0_0, '0', qtgui_const_sink_x_0_0, '0']
 - [blocks_multiply_xx_0_0, '0', qtgui_time_sink_x_0_0_0, '0']
 - [blocks_repeat_0, '0', blocks_multiply_xx_0, '0']
-- [blocks_vector_source_x_0, '0', blocks_repeat_0, '0']
+- [blocks_vector_source_x_0, '0', blocks_multiply_const_vxx_0, '0']
 
 metadata:
   file_format: 1
