@@ -23,7 +23,7 @@ Excellent GNU Radio tutorials and Youtube videos by Prof Jason from Harvey Mudd:
 
 About software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
 
-DSP and SDR using Python: https://pysdr.org/index.html
+Great tutorial on DSP and SDR using Python: https://pysdr.org/index.html
 
 
 
