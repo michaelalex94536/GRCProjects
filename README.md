@@ -19,7 +19,7 @@ Installing GNU Radio Companion: https://wiki.gnuradio.org/index.php/InstallingGR
 
 About GNU Radio: https://wiki.gnuradio.org/index.php?title=Main_Page
 
-Excellent GNU Radio tutorials and Youtube videos by Prof Jason from Harvey Mudd: https://gallicchio.github.io/learnSDR/
+Excellent GNU Radio tutorials and YouTube videos by Prof Jason from Harvey Mudd: https://gallicchio.github.io/learnSDR/
 
 About software-defined radio: https://en.wikipedia.org/wiki/Software-defined_radio
 
