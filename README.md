@@ -46,7 +46,7 @@ The "DTMF_generator" project generates DTMF (Touch-Tone) signals, displays them 
 "OOK_Rx_simulator" shows how to demodulate a carrier with digital data using on-off keying (OOK).   
 
 #### OOK_decoder
-"OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we provide a few files of captured IQ data for the user to experiment with.
+"OOK_decoder" takes an IQ data file captured in the "OOK_capture" project and shows the signals in both time- and frequency domains.  No hardware needed as we provide a few files of captured IQ data for the user to experiment with if they can't capture their own.
 
 #### Signal_generator
 Real and complex signals are generated and displayed in the time- and frequency domains.  
