@@ -2,7 +2,7 @@
 
 In this project, we show the frequency spectra of the product of real and complex signals.  The results may be a bit surprising. 
 
-A real signal has both negative and positive frequencies.  When two real signals are multiplied, the products are located at both the sum and difference frequencies of the two signals, and these sum and difference frequencies are seen at both positive and negative frequencies - which means there are four peaks in the product spectrum, as seen in the figure below.  Here, we show the product spectrum of two sinusoidal signals having frequencies of 100kHz and 200kHz, respectively.  The difference frequencies +/-100kHz and +/-300kHz are clearly seen.  
+A real signal has both negative and positive frequencies.  When two real signals are multiplied, the products are located at both the sum and difference frequencies of the two signals, and these sum and difference frequencies are seen at both positive and negative frequencies - which means there are four peaks in the product spectrum, as seen in the figure below,  where we show the product spectrum of two sinusoidal signals having frequencies of 100kHz and 200kHz, respectively.  The difference frequencies +/-100kHz and +/-300kHz are clearly seen.  
 ![image](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/real_signal_product_spectrum.png)
 
 
