@@ -240,8 +240,8 @@ class Signal_generator(gr.top_block, Qt.QWidget):
             self.qtgui_freq_sink_x_0_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_freq_sink_x_0_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0_0.qwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_0_win, 1, 1, 1, 1)
-        for r in range(1, 2):
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_0_win, 3, 1, 1, 1)
+        for r in range(3, 4):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(1, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
@@ -286,97 +286,7 @@ class Signal_generator(gr.top_block, Qt.QWidget):
             self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.qwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 1, 0, 1, 1)
-        for r in range(1, 2):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
-        self.qtgui_const_sink_x_0_0 = qtgui.const_sink_c(
-            1024, #size
-            "Real constellation", #name
-            1, #number of inputs
-            None # parent
-        )
-        self.qtgui_const_sink_x_0_0.set_update_time(0.10)
-        self.qtgui_const_sink_x_0_0.set_y_axis(-2, 2)
-        self.qtgui_const_sink_x_0_0.set_x_axis(-2, 2)
-        self.qtgui_const_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
-        self.qtgui_const_sink_x_0_0.enable_autoscale(False)
-        self.qtgui_const_sink_x_0_0.enable_grid(False)
-        self.qtgui_const_sink_x_0_0.enable_axis_labels(True)
-
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        colors = ["blue", "red", "red", "red", "red",
-            "red", "red", "red", "red", "red"]
-        styles = [0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0]
-        markers = [0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-            1.0, 1.0, 1.0, 1.0, 1.0]
-
-        for i in range(1):
-            if len(labels[i]) == 0:
-                self.qtgui_const_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_const_sink_x_0_0.set_line_label(i, labels[i])
-            self.qtgui_const_sink_x_0_0.set_line_width(i, widths[i])
-            self.qtgui_const_sink_x_0_0.set_line_color(i, colors[i])
-            self.qtgui_const_sink_x_0_0.set_line_style(i, styles[i])
-            self.qtgui_const_sink_x_0_0.set_line_marker(i, markers[i])
-            self.qtgui_const_sink_x_0_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_const_sink_x_0_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0_0.qwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_const_sink_x_0_0_win, 3, 1, 1, 1)
-        for r in range(3, 4):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(1, 2):
-            self.top_grid_layout.setColumnStretch(c, 1)
-        self.qtgui_const_sink_x_0 = qtgui.const_sink_c(
-            1024, #size
-            "Complex constellation", #name
-            1, #number of inputs
-            None # parent
-        )
-        self.qtgui_const_sink_x_0.set_update_time(0.10)
-        self.qtgui_const_sink_x_0.set_y_axis(-2, 2)
-        self.qtgui_const_sink_x_0.set_x_axis(-2, 2)
-        self.qtgui_const_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
-        self.qtgui_const_sink_x_0.enable_autoscale(False)
-        self.qtgui_const_sink_x_0.enable_grid(False)
-        self.qtgui_const_sink_x_0.enable_axis_labels(True)
-
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        colors = ["blue", "red", "red", "red", "red",
-            "red", "red", "red", "red", "red"]
-        styles = [0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0]
-        markers = [0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-            1.0, 1.0, 1.0, 1.0, 1.0]
-
-        for i in range(1):
-            if len(labels[i]) == 0:
-                self.qtgui_const_sink_x_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_const_sink_x_0.set_line_label(i, labels[i])
-            self.qtgui_const_sink_x_0.set_line_width(i, widths[i])
-            self.qtgui_const_sink_x_0.set_line_color(i, colors[i])
-            self.qtgui_const_sink_x_0.set_line_style(i, styles[i])
-            self.qtgui_const_sink_x_0.set_line_marker(i, markers[i])
-            self.qtgui_const_sink_x_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.qwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_const_sink_x_0_win, 3, 0, 1, 1)
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 3, 0, 1, 1)
         for r in range(3, 4):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
@@ -394,12 +304,10 @@ class Signal_generator(gr.top_block, Qt.QWidget):
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_conjugate_cc_0, 0))
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle_0, 0))
-        self.connect((self.analog_sig_source_x_0, 0), (self.qtgui_const_sink_x_0, 0))
         self.connect((self.analog_sig_source_x_0, 0), (self.qtgui_freq_sink_x_0, 0))
         self.connect((self.analog_sig_source_x_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.blocks_multiply_const_vxx_0, 0))
         self.connect((self.blocks_conjugate_cc_0, 0), (self.blocks_add_xx_0, 1))
-        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.qtgui_const_sink_x_0_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.qtgui_freq_sink_x_0_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.qtgui_time_sink_x_0_0, 0))
 
