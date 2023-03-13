@@ -11,3 +11,5 @@ On the other hand, a complex sinusoidal signal has only one peak in its spectrum
 ![image](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/complex_signal_product_spectrum.png)
 
 Finally, we see that when we change the sign(s) of the frequencies of the original complex time-domain signals A or B, the sign of the frequency on the spectral axis changes sign as well.  
+
+Please see the "Signal_generator" folder README.md for a simple mathematical explanation regarding the frequency spectra of real and complex signals.  
