@@ -12,4 +12,12 @@ On the other hand, a complex sinusoidal signal has only one peak in its spectrum
 
 Finally, we see that when we change the sign(s) of the frequencies of the original complex time-domain signals A or B, the sign of the frequency on the spectral axis changes sign as well.  
 
-Please see the "Signal_generator" folder README.md for a simple mathematical explanation regarding the frequency spectra of real and complex signals.  
+From "Signal_Generator" project README.md:
+From Euler's formula, a real signal described by a cosine of a given frequency can be written as a pair of phasors whose frequencies have opposite sign, giving rise to the two peaks at positive and negative frequencies seen in the figure above:
+
+![image](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/real_signal_eqn.png)
+
+For the complex signal, it is easy to show the negative frequency terms cancel, leading to a single peak at a positive frequency: 
+
+![image](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/complex_signal_eqn.png)  
+
