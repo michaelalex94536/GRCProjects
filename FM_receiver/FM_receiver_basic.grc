@@ -100,6 +100,37 @@ blocks:
     coordinate: [824, 188.0]
     rotation: 0
     state: true
+- name: iio_pluto_source_0
+  id: iio_pluto_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: '20000000'
+    bbdc: 'True'
+    buffer_size: '32768'
+    comment: ''
+    filter: ''
+    filter_source: '''Auto'''
+    fpass: '0'
+    frequency: '88500000'
+    fstop: '0'
+    gain1: '''slow_attack'''
+    len_tag_key: packet_len
+    manual_gain1: '64'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    quadrature: 'True'
+    rfdc: 'True'
+    samplerate: int(samp_rate)
+    type: fc32
+    uri: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [104, 372.0]
+    rotation: 0
+    state: true
 - name: low_pass_filter_0
   id: low_pass_filter
   parameters:
@@ -285,7 +316,7 @@ blocks:
     bus_structure: null
     coordinate: [368, 132.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: qtgui_freq_sink_x_0_0_0
   id: qtgui_freq_sink_x
   parameters:
@@ -396,7 +427,7 @@ blocks:
     color9: dark green
     comment: ''
     ctrlpanel: 'False'
-    entags: 'True'
+    entags: 'False'
     grid: 'False'
     gui_hint: ''
     label1: Filtered Re
@@ -493,7 +524,7 @@ blocks:
     color9: dark green
     comment: ''
     ctrlpanel: 'False'
-    entags: 'True'
+    entags: 'False'
     grid: 'False'
     gui_hint: ''
     label1: Demodulated audio
@@ -917,12 +948,14 @@ blocks:
     bus_structure: null
     coordinate: [64, 164.0]
     rotation: 0
-    state: true
+    state: disabled
 
 connections:
 - [analog_wfm_rcv_0, '0', audio_sink_0, '0']
 - [analog_wfm_rcv_0, '0', qtgui_freq_sink_x_0_0_0, '0']
 - [analog_wfm_rcv_0, '0', qtgui_time_sink_x_0_0, '0']
+- [iio_pluto_source_0, '0', low_pass_filter_0, '0']
+- [iio_pluto_source_0, '0', qtgui_freq_sink_x_0_0, '0']
 - [low_pass_filter_0, '0', analog_wfm_rcv_0, '0']
 - [low_pass_filter_0, '0', qtgui_freq_sink_x_0, '0']
 - [low_pass_filter_0, '0', qtgui_time_sink_x_0, '0']

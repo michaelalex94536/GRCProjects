@@ -34,10 +34,9 @@ import signal
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
+from gnuradio import iio
 from gnuradio.qtgui import Range, RangeWidget
 from PyQt5 import QtCore
-import osmosdr
-import time
 
 
 
@@ -85,23 +84,6 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self._center_freq_range = Range(88.3e6, 110.1e6, 0.2e6, 88.5e6, 200)
-        self._center_freq_win = RangeWidget(self._center_freq_range, self.set_center_freq, "'center_freq'", "counter_slider", float, QtCore.Qt.Horizontal)
-        self.top_layout.addWidget(self._center_freq_win)
-        self.rtlsdr_source_0 = osmosdr.source(
-            args="numchan=" + str(1) + " " + ""
-        )
-        self.rtlsdr_source_0.set_sample_rate(samp_rate)
-        self.rtlsdr_source_0.set_center_freq(center_freq, 0)
-        self.rtlsdr_source_0.set_freq_corr(0, 0)
-        self.rtlsdr_source_0.set_dc_offset_mode(0, 0)
-        self.rtlsdr_source_0.set_iq_balance_mode(0, 0)
-        self.rtlsdr_source_0.set_gain_mode(True, 0)
-        self.rtlsdr_source_0.set_gain(10, 0)
-        self.rtlsdr_source_0.set_if_gain(20, 0)
-        self.rtlsdr_source_0.set_bb_gain(20, 0)
-        self.rtlsdr_source_0.set_antenna('', 0)
-        self.rtlsdr_source_0.set_bandwidth(0, 0)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
             10000, #size
             samp_rate/5, #samp_rate
@@ -114,7 +96,7 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
 
         self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
 
-        self.qtgui_time_sink_x_0_0.enable_tags(True)
+        self.qtgui_time_sink_x_0_0.enable_tags(False)
         self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
         self.qtgui_time_sink_x_0_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0_0.enable_grid(False)
@@ -162,7 +144,7 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
 
         self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
 
-        self.qtgui_time_sink_x_0.enable_tags(True)
+        self.qtgui_time_sink_x_0.enable_tags(False)
         self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
         self.qtgui_time_sink_x_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0.enable_grid(False)
@@ -244,48 +226,6 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
 
         self._qtgui_freq_sink_x_0_0_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0_0_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_freq_sink_x_0_0_0_win)
-        self.qtgui_freq_sink_x_0_0 = qtgui.freq_sink_c(
-            1024, #size
-            window.WIN_BLACKMAN_hARRIS, #wintype
-            0, #fc
-            samp_rate, #bw
-            "Raw", #name
-            1,
-            None # parent
-        )
-        self.qtgui_freq_sink_x_0_0.set_update_time(0.10)
-        self.qtgui_freq_sink_x_0_0.set_y_axis(-140, 10)
-        self.qtgui_freq_sink_x_0_0.set_y_label('Relative Gain', 'dB')
-        self.qtgui_freq_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
-        self.qtgui_freq_sink_x_0_0.enable_autoscale(False)
-        self.qtgui_freq_sink_x_0_0.enable_grid(False)
-        self.qtgui_freq_sink_x_0_0.set_fft_average(1.0)
-        self.qtgui_freq_sink_x_0_0.enable_axis_labels(True)
-        self.qtgui_freq_sink_x_0_0.enable_control_panel(False)
-        self.qtgui_freq_sink_x_0_0.set_fft_window_normalized(False)
-
-
-
-        labels = ['Raw spectrum', '', '', '', '',
-            '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        colors = ["red", "red", "green", "black", "cyan",
-            "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-            1.0, 1.0, 1.0, 1.0, 1.0]
-
-        for i in range(1):
-            if len(labels[i]) == 0:
-                self.qtgui_freq_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_freq_sink_x_0_0.set_line_label(i, labels[i])
-            self.qtgui_freq_sink_x_0_0.set_line_width(i, widths[i])
-            self.qtgui_freq_sink_x_0_0.set_line_color(i, colors[i])
-            self.qtgui_freq_sink_x_0_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_freq_sink_x_0_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0_0.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_freq_sink_x_0_0_win)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
             1024, #size
             window.WIN_BLACKMAN_hARRIS, #wintype
@@ -337,6 +277,19 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
                 50e3,
                 window.WIN_HAMMING,
                 6.76))
+        self.iio_pluto_source_0 = iio.fmcomms2_source_fc32('' if '' else iio.get_pluto_uri(), [True, True], 32768)
+        self.iio_pluto_source_0.set_len_tag_key('packet_len')
+        self.iio_pluto_source_0.set_frequency(88500000)
+        self.iio_pluto_source_0.set_samplerate(int(samp_rate))
+        self.iio_pluto_source_0.set_gain_mode(0, 'slow_attack')
+        self.iio_pluto_source_0.set_gain(0, 64)
+        self.iio_pluto_source_0.set_quadrature(True)
+        self.iio_pluto_source_0.set_rfdc(True)
+        self.iio_pluto_source_0.set_bbdc(True)
+        self.iio_pluto_source_0.set_filter_params('Auto', '', 0, 0)
+        self._center_freq_range = Range(88.3e6, 110.1e6, 0.2e6, 88.5e6, 200)
+        self._center_freq_win = RangeWidget(self._center_freq_range, self.set_center_freq, "'center_freq'", "counter_slider", float, QtCore.Qt.Horizontal)
+        self.top_layout.addWidget(self._center_freq_win)
         self.audio_sink_0 = audio.sink(48000, '', True)
         self.analog_wfm_rcv_0 = analog.wfm_rcv(
         	quad_rate=samp_rate/5,
@@ -350,11 +303,10 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
         self.connect((self.analog_wfm_rcv_0, 0), (self.audio_sink_0, 0))
         self.connect((self.analog_wfm_rcv_0, 0), (self.qtgui_freq_sink_x_0_0_0, 0))
         self.connect((self.analog_wfm_rcv_0, 0), (self.qtgui_time_sink_x_0_0, 0))
+        self.connect((self.iio_pluto_source_0, 0), (self.low_pass_filter_0, 0))
         self.connect((self.low_pass_filter_0, 0), (self.analog_wfm_rcv_0, 0))
         self.connect((self.low_pass_filter_0, 0), (self.qtgui_freq_sink_x_0, 0))
         self.connect((self.low_pass_filter_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.rtlsdr_source_0, 0), (self.low_pass_filter_0, 0))
-        self.connect((self.rtlsdr_source_0, 0), (self.qtgui_freq_sink_x_0_0, 0))
 
 
     def closeEvent(self, event):
@@ -370,20 +322,18 @@ class FM_receiver_basic(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+        self.iio_pluto_source_0.set_samplerate(int(self.samp_rate))
         self.low_pass_filter_0.set_taps(firdes.low_pass(1, self.samp_rate, 100e3, 50e3, window.WIN_HAMMING, 6.76))
         self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate/5)
-        self.qtgui_freq_sink_x_0_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_freq_sink_x_0_0_0.set_frequency_range(0, (self.samp_rate/5)/10)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate/5)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate/5)
-        self.rtlsdr_source_0.set_sample_rate(self.samp_rate)
 
     def get_center_freq(self):
         return self.center_freq
 
     def set_center_freq(self, center_freq):
         self.center_freq = center_freq
-        self.rtlsdr_source_0.set_center_freq(self.center_freq, 0)
 
 
 
