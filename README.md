@@ -61,4 +61,4 @@ Real and complex signals are generated and displayed in the time- and frequency 
 "OOK_capture" shows how to use an RTL-SDR dongle to display and capture OOK signals from a very old garage door opener.  You'll need a wireless key fob or garage door opener in addition to an RTL-SDR dongle for this project. 
 
 #### FM_receiver_basic
-"FM_receiver_basic" shows how to use an RTL-SDR dongle to demodulate and listen to a single, user-selected FM radio station using the PC speaker.  The user should know the frequency of the station they want to listen to.  
+"FM_receiver_basic" shows how to use an RTL-SDR dongle or ADALM-PLUTO SDR to demodulate and listen to a single, user-selected FM radio station using the PC speaker.  The user should know the frequency of the station they want to listen to, and can select it with a slider on the GUI.  
