@@ -62,3 +62,6 @@ Real and complex signals are generated and displayed in the time- and frequency 
 
 #### FM_receiver_basic
 "FM_receiver_basic" shows how to use an RTL-SDR dongle or ADALM-PLUTO SDR to demodulate and listen to a single, user-selected FM radio station using the PC speaker.  The user should know the frequency of the station they want to listen to, and can select it with a slider on the GUI.  
+
+#### Attn_measure
+"Attn_measure" shows how to measure the attenuation of in-line attenuators using the ADALM-PLUTO hardware.  The attenuator to be measured is placed between the Tx and Rx SMA connectors and the power in the signal harmonic is measured and compared with a direct "loop back" connection to quantify the attenuation.  
