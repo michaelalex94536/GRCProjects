@@ -4,6 +4,8 @@
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/Pluto_Attn.png)
 
+Figure 1    Attenuator connected in-line between the Tx and Rx SMA connectors of the Pluto. This unit has been hacked to add additional Rx and Tx channels.  
+
 <p>&nbsp;</p>
 
 From the constellation plot below, we see the 0's and 1's are distinguishable, even in the presence of moderate noise. 
