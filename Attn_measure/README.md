@@ -1,7 +1,5 @@
 #### Attn_measure
-"Attn_measure" shows how to demodulate on-off-keying (OOK) data by mixing the modulated signal with the carrier signal.  No external hardware needed.   
-
-The baseband signal has 24-bits (0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0).  
+"Attn_measure" shows how to measure the attenuation of an in-line attenuator with the Pluto.  As seen in the figure below, the attenuator has SMA connectors that allow it to be easily connected between the Tx and Rx SMA connectors of the Pluto using short SMA cables. 
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/Pluto_Attn.jpg)
 
