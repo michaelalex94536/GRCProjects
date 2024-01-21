@@ -1,4 +1,4 @@
-#### Attn_measure
+## Attn_measure
 "Attn_measure" shows how to measure the attenuation of an in-line attenuator with the Pluto.  As seen in the photograph below, the attenuator (blue, barrel-shaped device in the upper-right portion of the figure) has SMA connectors that allow it to be easily connected between the Tx and Rx SMA connectors of the Pluto using short SMA cables. 
 &nbsp; 
 
