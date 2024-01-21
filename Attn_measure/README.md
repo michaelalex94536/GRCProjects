@@ -6,10 +6,12 @@
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/Pluto_Attn.png)
 
 Figure 1    Attenuator connected in-line between the Tx and Rx SMA connectors of the Pluto. This unit has been hacked to add additional Rx and Tx channels.  
-
 <p>&nbsp;</p>
 
-From the constellation plot below, we see the 0's and 1's are distinguishable, even in the presence of moderate noise. 
+### Procedure
+Using the GRC flowgraph associated with this project, the Tx and Rx SMA connectors of the Pluto were directly connected together with short cables. The Tx attenuation of the Pluto Sink and the Rx gain of the Pluto Source were adjusted so that the spectral peak of the 150kHz Signal Source was approximately -65dB. It is important the initial Rx gain and Tx attenuation are set such that the unattenuated 150kHz signal is not over-amplified and distorted (check the spectrum for harmonics!) but not too close to the noise floor either.  In my case, the Rx gain was set to 0dB and the Tx attenuation was set to 43dB.  In Figure 2 below, we see the 150kHz signal spectral peak and noise floor with no attenuators in use.  
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/PlutoAttenuator_spectrum.png)
 
+Figure 2    Measured 150kHZ spectral peak with no attenuators in use. Here, the Pluto Tx attenuation and Rx gain were set to 43dB and 0 dB respectively.  
+<p>&nbsp;</p>
