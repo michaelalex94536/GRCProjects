@@ -19,3 +19,7 @@ Figure 2    Measured 150kHZ spectral peak with high attenuation in use. Here, th
 Once appropriate Rx gain and Tx attenuation settings for the flowgraph are found, the magnitude of the 150kHz spectral peak is recorded without any attenuation, and then the attenuators are connected between the Pluto Tx and Rx connectors and the spectral peak magnitude is recorded.  I swapped out the attenuators with the flowgraph turned off for safety, started the flowgraph, and then put the mouse cursor on the 150kHz peak to estimate the power in the signal; I'm sure there is a much smarter way to do this in the flowgraph.  One can then make a table of the measured power versus the attenuation value and subtract the 0dB attenuation spectral peak value from all measurements in order to plot the measured versus the ideal attenuation as seen in Figure 3 below. 
 
 ![Signals](https://github.com/michaelalex94536/GRCProjects/blob/main/Images/PlutoAttenuator_plot.png)
+
+
+Figure 3    Measured (red symbols) versus ideal attenuation and linear fit.   
+<p>&nbsp;</p>
